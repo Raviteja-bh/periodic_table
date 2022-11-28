@@ -64,3 +64,6 @@ then
 fi
 echo "Element removed"
 REMOVE_ELEMENT=$($PSQL "DELETE FROM properties WHERE atomic_number=1000")
+
+REMOVE_COLUMN=$($PSQL "ALTER TABLE properties DROP COLUMN type")
+echo "column removed."
