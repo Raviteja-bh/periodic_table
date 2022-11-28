@@ -62,7 +62,7 @@ else
   fi
 fi
 
-SEARCH=$($PSQL "SELECT * FROM properties WHERE atomic_number=1000")
+SEARCH=$($PSQL "SELECT * FROM elements WHERE atomic_number=1000")
 if [[ -z $SEARCH ]]
 then
     #echo "Add element"
