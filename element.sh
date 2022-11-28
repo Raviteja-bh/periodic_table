@@ -62,8 +62,9 @@ then
     echo "Add element"
     ADD_ELEMENT=$($PSQL "INSERT INTO properties(atomic_number, type, atomic_mass, melting_point_celsius, boiling_point_celsius, type_id) VALUES(1000, 'metalloid', 1, 10, 100, 3)")
 fi
-echo "Element removed"
+
 REMOVE_ELEMENT=$($PSQL "DELETE FROM properties WHERE atomic_number=1000")
+echo "elements removed are $REMOVE_ELEMENT"
 
 REMOVE_COLUMN=$($PSQL "ALTER TABLE properties DROP COLUMN type")
-echo "column removed."
+echo "column removed are $REMOVE_COLUMN"
